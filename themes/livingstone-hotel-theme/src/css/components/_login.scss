@@ -1,0 +1,180 @@
+.custom-login-page {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #0b63ce, #0b5fff, #50d2ff);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+
+  img {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    color: #272833;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #6b6c7e;
+    font-size: 16px;
+  }
+}
+
+// Estilizando os elementos do portlet de login
+.portlet-login-wrapper {
+  .portlet {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .portlet-content {
+    padding: 0;
+    border: none;
+  }
+
+  .portlet-title-text {
+    display: none; // Esconde o título do portlet pois já temos um no cabeçalho
+  }
+
+  // Campos do formulário
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .field-wrapper {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #393a4a;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e7e7ed;
+    border-radius: 4px;
+    background-color: #f1f2f5;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    height: auto;
+    box-shadow: none;
+
+    &:focus {
+      border-color: #0b5fff;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(11, 95, 255, 0.2);
+    }
+  }
+
+  // Botão de login
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: #0b5fff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #0953e3;
+    }
+  }
+
+  // Links adicionais
+  .navigation {
+    margin-top: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #0b5fff;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.login-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e7e7ed;
+  text-align: center;
+
+  p {
+    color: #6b6c7e;
+    margin-bottom: 15px;
+  }
+
+  .create-account-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #0b5fff;
+    border: 1px solid #0b5fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: rgba(11, 95, 255, 0.1);
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 576px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}

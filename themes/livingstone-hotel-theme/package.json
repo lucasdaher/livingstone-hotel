@@ -19,7 +19,7 @@
 		"liferay-frontend-theme-unstyled": "6.0.45",
 		"liferay-theme-tasks": "^11.5.5",
 		"sassOptions": {
-			"dartSass": "false"
+			"dartSass": false
 		}
 	},
 	"dependencies": {

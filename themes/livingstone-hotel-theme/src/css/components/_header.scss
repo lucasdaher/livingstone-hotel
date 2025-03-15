@@ -1,1 +1,66 @@
-.header {}
+@use "../mixins";
+
+#banner {
+  background-color: #3b82f6;
+  padding: 1rem 6rem;
+  @include mixins.flex($justify: space-between, $align: center, $direction: row);
+}
+
+.header {
+  &__logo {
+    display: block;
+    width: 174px;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__logo:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(105%);
+  }
+
+  &__button {
+    border: 1px solid #fff;
+    outline: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__button:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #eff6ff;
+    color: #3b82f6;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px, rgba(0, 0, 0, 0.10) 0px 1px 2px;
+    cursor: pointer;
+  }
+
+  &__ul {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+
+    @include mixins.flex($justify: space-between, $align: center)
+  }
+
+  &__nav {
+    @include mixins.flex($justify: space-between, $align: center, $gap: 24px);
+
+    &__li {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    &__li:hover {
+      transition: all 0.2s ease-in-out;
+      color: #dbeafe;
+    }
+  }
+}

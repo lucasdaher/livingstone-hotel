@@ -1,0 +1,9 @@
+$initialGap: 6px !default;
+
+@mixin flex($gap: $initialGap, $display: flex, $direction: row, $justify: space-between, $align: center) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
