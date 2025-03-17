@@ -1,0 +1,122 @@
+@use '../variables/variables'as *;
+
+.header {
+  // Limitar o conteúdo para o tamanho especificado e centralizar conteúdo
+  background-color: $blue-700;
+  color: $white-color;
+
+  width: 100%;
+  padding: 16px 32px;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 0px 24px;
+
+    &:hover {
+      transform: scale(102%);
+      transition: all $transition-default-duration ease-in-out;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__accessButton {
+    background-color: $white-color;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all $transition-default-duration ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      transition: all $transition-default-duration ease-in-out;
+      text-decoration: none;
+      background-color: $blue-100;
+      border: 0;
+
+      .header__accessButton__text {
+        color: $blue-700;
+        transition: all $transition-default-duration ease-in-out;
+      }
+    }
+
+    &__text {
+      transition: all $transition-default-duration ease-in-out;
+      text-decoration: none;
+      color: $blue-700;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    // border: 1px solid $white-color;
+    border: 0;
+    border-radius: 100px;
+    padding: 10px 24px;
+    color: $white-color;
+    cursor: pointer;
+    transition: all $transition-default-duration ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      transition: all $transition-default-duration ease-in-out;
+      text-decoration: none;
+      background-color: $blue-600;
+      border: 0;
+
+      .header__button__text {
+        color: $white-color;
+        transition: all $transition-default-duration ease-in-out;
+      }
+    }
+
+    &__text {
+      transition: all $transition-default-duration ease-in-out;
+      text-decoration: none;
+      color: $white-color;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
